@@ -3,6 +3,7 @@ package src.overrides;
 import src.utils.Fonts;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MenuButton extends JButton{
     String buttonName;
@@ -21,5 +22,17 @@ public class MenuButton extends JButton{
         this.setText(this.buttonName);
         this.setLocation(this.xPos, this.yPos);
         this.setSize(this.xSize, this.ySize);
+    }
+    public void setParamsSmile(){
+        this.setFont(new Fonts().Smile());
+        this.setText(this.buttonName);
+        this.setLocation(this.xPos, this.yPos);
+        this.setSize(this.xSize, this.ySize);
+    }
+    public void setImage(String directory, int widthI, int heightI){
+        ImageIcon icon = new ImageIcon(directory);
+        Image im = icon.getImage();
+        Image im2 = im.getScaledInstance(widthI, heightI, 10);
+        this.setIcon(new ImageIcon(im2));
     }
 }

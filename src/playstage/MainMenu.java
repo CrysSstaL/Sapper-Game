@@ -18,7 +18,6 @@ public class MainMenu extends JPanel {
     public MainMenu(Frame frame, Media media) throws IOException {
         int XBUTTONSIZE = frame.getWidth() / 5;
         int YBUTTONSIZE = frame.getHeight() / 10;
-
         JPanelWithBackground menuPanel = new JPanelWithBackground(media.getDir() + "/background.jpg",
                 0, 0, frame.getWidth(), frame.getHeight());
         menuPanel.setLayout(null);

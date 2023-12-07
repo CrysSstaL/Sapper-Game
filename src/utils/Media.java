@@ -6,8 +6,16 @@ public class Media {
     private final String helpText;
     private final String endText;
     private final String dir;
+    private final String startPlay;
+    private final String easyManDiscription;
+    private final String middleManDiscription;
+    private final String hardManDiscription;
+    private final String endPlayText;
+    private final String [] colors;
+
     public Media() {
         this.dir = System.getProperty("user.dir") + "/photo";
+
         this.menuTitle = "Добро пожаловать в игру Сапер!";
         this.menuText = "Рады приветствовать тебя в этом увлекательном мире разминирования полей.\n" +
                 " Готов ли ты проверить свою логику, смекалку и умение мыслить стратегически?\n" +
@@ -45,6 +53,43 @@ public class Media {
                 " Играйте, наслаждайтесь игрой и удачи в разминировании полей!";
 
         this.endText = "Вы точно хотите выйти?";
+
+        this.startPlay = "Выберите уровень сложности \uD83D\uDE08";
+
+        this.easyManDiscription = "Легкий уровень сложности в игре Сапер" +
+                " предназначен для новичков и тех игроков," +
+                " которые не хотят тратить много времени на размышления" +
+                " и стратегическое планирование.\n" +
+                "Поле разделено на относительно небольшую сетку - 10х10 клеток," +
+                "и содержит 15 мин.\n" +
+                "Легкий уровень сложности в игре Сапер предлагает отличную возможность" +
+                " для новичков познакомиться с основными механиками игры" +
+                " и развить навыки поиска мин и стратегического мышления.";
+
+        this.middleManDiscription = "На среднем уровне сложности игра становится более требовательной" +
+                " к тактическим навыкам и логическому мышлению игрока.\n" +
+                " Игровое поле становится больше, обычно 16x16 клеток, и к числу бомб" +
+                " в игре добавляется ещё больше -  40 бомб.\n" +
+                " В целом, средний уровень сложности в игре Сапер" +
+                " является хорошим переходом от начинающего уровня" +
+                " к более продвинутым, требующим серьезного анализа" +
+                " и стратегического мышления.";
+
+        this.hardManDiscription = "Сложность Сапера на высшем уровне достигает МАКСИМУМА," +
+                "Игровое поле представляет собой сетку 100x100." +
+                "Количество мин на поле также максимально," +
+                " что делает игру еще более непредсказуемой!" +
+                "На данном уровне сложности, игрок должен" +
+                " опираться на технику и навыки, которые он приобрел" +
+                " на предыдущих уровнях. Это включает в себя умение" +
+                " анализировать окружающие мины, разрабатывать стратегии" +
+                " для установки флажков и безопасного открытия ячеек.";
+
+        //                               синий     зеленый   красный   фиолетовый  коричневый бирюзовый    черный      белый
+        this.colors = new String[]{"", "#5A9CF2", "#00B336", "#EF0101", "#7704BE", "#A35D00", "#03CEB0", "#000505", "#FFFFFF"};
+
+        this.endPlayText = "Игра закончена! \n" +
+                "Ваше результат на табло сверху!";
     }
 
     public String getText(String text){
@@ -62,4 +107,22 @@ public class Media {
     public String getEndText(){ return this.endText; }
 
     public String getDir(){return this.dir;}
+
+    public String getStartPlay() {return this.startPlay;}
+
+    public String getEasyManDiscription() {return this.easyManDiscription;}
+
+    public String getMiddleManDiscription() {return this.middleManDiscription;}
+
+    public String getHardManDiscription() {return this.hardManDiscription;}
+
+    public String [] getColors()
+    {
+        return this.colors;
+    }
+
+    public String getEndPlayText() {
+        return this.endPlayText;
+    }
+
 }

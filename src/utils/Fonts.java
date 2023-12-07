@@ -15,4 +15,8 @@ public class Fonts {
     public Font Smile(){
         return new Font("Courier", Font.ITALIC, 19);
     }
+    public Font Timer(){
+        return new Font("Courier", Font.ITALIC, 30);
+    }
+
 }

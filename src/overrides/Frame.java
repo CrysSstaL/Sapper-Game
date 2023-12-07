@@ -36,5 +36,4 @@ public class Frame extends JFrame {
     public String getPlayState(){
         return this.state;
     }
-
 }
